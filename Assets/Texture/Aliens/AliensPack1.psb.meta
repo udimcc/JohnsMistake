@@ -1760,7 +1760,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1328
     mosaicPosition: {x: 0, y: 0}
   - name: Body
@@ -1774,7 +1774,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1326
     mosaicPosition: {x: 0, y: 0}
   - name: Leg1_1
@@ -1893,7 +1893,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1318
     mosaicPosition: {x: 0, y: 0}
   - name: Body
@@ -1949,7 +1949,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1308
     mosaicPosition: {x: 0, y: 0}
   - name: Body
@@ -2005,7 +2005,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1297
     mosaicPosition: {x: 0, y: 0}
   - name: Body
@@ -2061,7 +2061,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1287
     mosaicPosition: {x: 0, y: 0}
   - name: Body2
@@ -2124,7 +2124,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1275
     mosaicPosition: {x: 0, y: 0}
   - name: Body5
@@ -2166,7 +2166,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1268
     mosaicPosition: {x: 0, y: 0}
   - name: Body5
@@ -2208,7 +2208,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1260
     mosaicPosition: {x: 0, y: 0}
   - name: Body2
@@ -2229,7 +2229,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1254
     mosaicPosition: {x: 0, y: 0}
   - name: Body3
@@ -2257,7 +2257,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1031
     mosaicPosition: {x: 0, y: 0}
   - name: Head
@@ -2299,7 +2299,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 1010
     mosaicPosition: {x: 0, y: 0}
   - name: Head
@@ -2334,7 +2334,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 990
     mosaicPosition: {x: 0, y: 0}
   - name: Head

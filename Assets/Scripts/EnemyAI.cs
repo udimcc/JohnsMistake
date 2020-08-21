@@ -28,13 +28,11 @@ public class EnemyAI : HitAwareness
     AIPath aiPath;
     WeaponAPI weapon;
     Animator animator;
-    Rigidbody2D rb;
 
     void Awake()
     {
         this.weapon = this.GetComponent<WeaponAPI>();
         this.animator = this.GetComponent<Animator>();
-        this.rb = this.GetComponent<Rigidbody2D>();
         this.patrol = this.GetComponent<Patrol>();
         this.destinationSetter = this.GetComponent<AIDestinationSetter>();
         this.aiPath = this.GetComponent<AIPath>();
@@ -88,7 +86,7 @@ public class EnemyAI : HitAwareness
                 break;
         }
 
-        this.animator.SetFloat("Speed", this.rb.velocity.magnitude);
+        this.animator.SetFloat("Speed", this.aiPath.velocity.magnitude);
     }
 
     bool CanSeePlayer()

@@ -19,14 +19,22 @@ public class Health : MonoBehaviour
     void Start()
     {
         this.currentHealth = this.maxHealth;
-        this.healthBar.SetMaxHealth(this.maxHealth);
-        this.healthBar.SetHealth(this.currentHealth);
+
+        if (this.healthBar)
+        {
+            this.healthBar.SetMaxHealth(this.maxHealth);
+            this.healthBar.SetHealth(this.currentHealth);
+        }
     }
 
     public void TakeDamage(float damage)
     {
         this.currentHealth -= damage;
-        this.healthBar.SetHealth(this.currentHealth);
+
+        if (this.healthBar)
+        {
+            this.healthBar.SetHealth(this.currentHealth);
+        }
 
         if (this.currentHealth <= 0)
         {
@@ -44,6 +52,10 @@ public class Health : MonoBehaviour
     public void GainHealth(float healthAmount)
     {
         this.currentHealth = Mathf.Min(this.maxHealth, this.currentHealth + healthAmount);
-        this.healthBar.SetHealth(this.currentHealth);
+
+        if (this.healthBar)
+        {
+            this.healthBar.SetHealth(this.currentHealth);
+        }
     }
 }

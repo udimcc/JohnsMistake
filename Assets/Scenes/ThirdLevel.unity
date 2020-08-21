@@ -81656,6 +81656,10 @@ PrefabInstance:
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 659195334}
+    - target: {fileID: 1703725578, guid: eca9f81ab0aea6446a859fd0d72d9351, type: 3}
+      propertyPath: gameOverText
+      value: 
+      objectReference: {fileID: 659195334}
     - target: {fileID: 8877529964547864793, guid: eca9f81ab0aea6446a859fd0d72d9351,
         type: 3}
       propertyPath: virtualCamera
@@ -81774,8 +81778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef089f1d4ad8bda40b781da0cedf2b6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelTime: 2
-  nextLevelName: MainMenu
+  nextLevelTime: 5
+  nextLevelName: WinMenu
   endOfLevelText: {fileID: 890319053}
 --- !u!4 &1261820852
 Transform:
