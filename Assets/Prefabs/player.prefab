@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 1675934877}
   - component: {fileID: 1675934883}
   - component: {fileID: 5038051256234237262}
-  - component: {fileID: 1231633604}
+  - component: {fileID: 1703725578}
   m_Layer: 10
   m_Name: player
   m_TagString: Player
@@ -710,7 +710,7 @@ MonoBehaviour:
   damage: 10
   attackRate: 10
   audioClip: {fileID: 8300000, guid: 8529f1b70867ff4448f71c3726a3ac0b, type: 3}
-  pushForce: 70
+  pushForce: 300
   gunEndPoint: {fileID: 8877529964863650006}
   gunFire: {fileID: 844519806461771228, guid: 892c75ab15140b34290f2dc17eb567b2, type: 3}
   hitableLayerMask:
@@ -848,7 +848,7 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &1231633604
+--- !u!114 &1703725578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

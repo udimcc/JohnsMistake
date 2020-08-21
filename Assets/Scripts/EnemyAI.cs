@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public enum State
 {
@@ -12,19 +13,19 @@ public enum State
 
 public class EnemyAI : HitAwareness
 {
-    public GameObject[] patrolWaypointsObjects;
     public Transform player;
     public float fieldOfView = 100f;
-    public float patrolSpeed = 100f;
-    public float afterPlayerSpeed = 200f;
+    public float patrolSpeed = 1f;
+    public float afterPlayerSpeed = 2f;
     public float discoverPlayerDist = 7;
     public float attackPlayerDist = 5;
     public float stopWalkDist = 3;
 
     [SerializeField] private LayerMask playerObstacleLayerMask = new LayerMask();
-    State state = State.Patrol;
-    Vector3[] patrolWaypoints;
-    EnemyPathfinding enemyPathfinding;
+    public State state = State.Patrol;
+    Patrol patrol;
+    AIDestinationSetter destinationSetter;
+    AIPath aiPath;
     WeaponAPI weapon;
     Animator animator;
     Rigidbody2D rb;
@@ -32,14 +33,19 @@ public class EnemyAI : HitAwareness
     void Awake()
     {
         this.weapon = this.GetComponent<WeaponAPI>();
-        this.enemyPathfinding = GetComponent<EnemyPathfinding>();
         this.animator = this.GetComponent<Animator>();
         this.rb = this.GetComponent<Rigidbody2D>();
+        this.patrol = this.GetComponent<Patrol>();
+        this.destinationSetter = this.GetComponent<AIDestinationSetter>();
+        this.aiPath = this.GetComponent<AIPath>();
     }
 
     void Start()
     {
-        patrolWaypoints = patrolWaypointsObjects.Select(x => x.transform.position).ToArray();
+        this.patrol.enabled = false;
+        this.destinationSetter.enabled = false;
+
+        this.patrol.targets = this.patrol.targets.OrderBy(x => Random.value).ToArray();
     }
 
     void FixedUpdate()
@@ -51,29 +57,30 @@ public class EnemyAI : HitAwareness
         switch (this.state)
         {
             case State.Patrol:
-                enemyPathfinding.SetPath(patrolWaypoints, patrolSpeed, 2);
+                this.patrol.enabled = true;
+                this.aiPath.maxSpeed = this.patrolSpeed;
 
                 if ((distToPlayer < this.discoverPlayerDist) && (canSeePlayer))
                 {
-                    enemyPathfinding.Stop();
+                    this.patrol.enabled = false;
                     this.state = State.AfterPlayer;
                 }
                 break;
 
             case State.AfterPlayer:
-                enemyPathfinding.GoTo(player.position, afterPlayerSpeed, this.stopWalkDist, !shouldAttack);
+                this.destinationSetter.enabled = true;
+                this.aiPath.maxSpeed = this.afterPlayerSpeed;
 
                 if (shouldAttack)
                 {
+                    this.destinationSetter.enabled = false;
                     this.state = State.Attacking;
                 }
                 break;
             case State.Attacking:
-                if (shouldAttack)
-                {
-                    this.Attack();
-                }
-                else
+                this.Attack();
+
+                if (!shouldAttack)
                 {
                     this.state = State.AfterPlayer;
                 }
@@ -118,7 +125,7 @@ public class EnemyAI : HitAwareness
     {
         if (this.state == State.Patrol)
         {
-            enemyPathfinding.Stop();
+            this.patrol.enabled = false;
             this.state = State.AfterPlayer;
         }
     }

@@ -17,6 +17,7 @@ public class EnemyPathfinding : MonoBehaviour
     float lastPathSetTime = 0;
 
     Seeker seeker;
+    AIDestinationSetter destinationSetter;
     Rigidbody2D rb;
 
     Vector3[] lastSetPathTargets;
@@ -84,6 +85,7 @@ public class EnemyPathfinding : MonoBehaviour
     {
         this.seeker = GetComponent<Seeker>();
         this.rb = GetComponent<Rigidbody2D>();
+        this.destinationSetter = this.GetComponent<AIDestinationSetter>();
     }
 
     void FixedUpdate()
@@ -129,6 +131,7 @@ public class EnemyPathfinding : MonoBehaviour
 
     void GoToWaypoint(Vector2 waypoint)
     {
+       // this.destinationSetter.target = waypoint;
         Vector2 direction = (waypoint - this.rb.position).normalized;
         this.rb.AddForce(direction * speed * Time.deltaTime);
     }
