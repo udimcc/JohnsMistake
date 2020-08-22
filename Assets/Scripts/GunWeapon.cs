@@ -24,6 +24,7 @@ public class GunWeapon : WeaponAPI
         this.fireFrequency = 1 / this.attackRate;
         this.lineOfShot.useWorldSpace = true;
         this.lineOfShot.enabled = false;
+        this.fireLight.SetActive(false);
     }
 
     void Update()
@@ -82,11 +83,13 @@ public class GunWeapon : WeaponAPI
         this.audioSource.PlayOneShot(audioClip);
         this.lineOfShot.enabled = true;
         this.animator.SetBool("IsAttacking", true);
+        this.fireLight.SetActive(true);
 
         yield return new WaitForSeconds(0.14f);
 
         this.lineOfShot.enabled = false;
         this.animator.SetBool("IsAttacking", false);
         Destroy(gunFireInstance);
+        this.fireLight.SetActive(false);
     }
 }

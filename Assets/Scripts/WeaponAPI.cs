@@ -7,6 +7,7 @@ public abstract class WeaponAPI : MonoBehaviour
     public float damage;
     public float attackRate;
     public AudioClip audioClip;
+    public GameObject fireLight;
 
     protected AudioSource audioSource;
     protected Animator animator;
