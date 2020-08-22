@@ -54,5 +54,7 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1;
             Cursor.lockState = this.lastCursorMode;
         }
+
+        Cursor.visible = Cursor.lockState == CursorLockMode.None;
     }
 }

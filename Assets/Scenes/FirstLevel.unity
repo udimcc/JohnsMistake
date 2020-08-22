@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2401,6 +2401,11 @@ PrefabInstance:
       propertyPath: endOfLevelText
       value: 
       objectReference: {fileID: 473734894}
+    - target: {fileID: 3734517853844053710, guid: 76ab19d5d315fef4f82849698b72cdd6,
+        type: 3}
+      propertyPath: currentLevelIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3734517853844053711, guid: 76ab19d5d315fef4f82849698b72cdd6,
         type: 3}
       propertyPath: m_Name
@@ -66726,6 +66731,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 1108078310071032424, guid: c9494d3af818f584eaa1cc225d9d3d20,
         type: 3}
+      propertyPath: targets.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108078310071032424, guid: c9494d3af818f584eaa1cc225d9d3d20,
+        type: 3}
       propertyPath: targets.Array.data[0]
       value: 
       objectReference: {fileID: 15137912}
@@ -66841,6 +66851,11 @@ PrefabInstance:
     - target: {fileID: 699611902, guid: c9494d3af818f584eaa1cc225d9d3d20, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108078310071032424, guid: c9494d3af818f584eaa1cc225d9d3d20,
+        type: 3}
+      propertyPath: targets.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1108078310071032424, guid: c9494d3af818f584eaa1cc225d9d3d20,
         type: 3}
@@ -67806,22 +67821,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1250098026, guid: eca9f81ab0aea6446a859fd0d72d9351, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1250098026, guid: eca9f81ab0aea6446a859fd0d72d9351, type: 3}
-      propertyPath: m_FalloffIntensity
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1250098026, guid: eca9f81ab0aea6446a859fd0d72d9351, type: 3}
-      propertyPath: m_Intensity
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1703725578, guid: eca9f81ab0aea6446a859fd0d72d9351, type: 3}
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 394494145}
+    - target: {fileID: 1971473529, guid: eca9f81ab0aea6446a859fd0d72d9351, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8877529964547864793, guid: eca9f81ab0aea6446a859fd0d72d9351,
         type: 3}
       propertyPath: virtualCamera

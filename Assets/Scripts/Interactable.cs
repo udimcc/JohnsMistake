@@ -25,6 +25,7 @@ public class Interactable : MonoBehaviour
     public void OnInteract()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene("LevelChooser");
     }
 

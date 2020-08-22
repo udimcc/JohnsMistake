@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 6847501ec44fa9c48955e332893ccfd5
   - enabled: 1
+    path: Assets/Scenes/Arcade.unity
+    guid: b2e4be878c0efa94584ae2c7a02160ff
+  - enabled: 1
+    path: Assets/Scenes/LevelChooser.unity
+    guid: 8d0ebfe6d747c8e4880f5addd334ca8a
+  - enabled: 1
     path: Assets/Scenes/FirstLevel.unity
     guid: 3b1dabb747259f9419ee50263368c4b0
   - enabled: 1
@@ -17,12 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThirdLevel.unity
     guid: 6f44895488dc6af46b1dfe4909fcd1aa
-  - enabled: 1
-    path: Assets/Scenes/Arcade.unity
-    guid: b2e4be878c0efa94584ae2c7a02160ff
-  - enabled: 1
-    path: Assets/Scenes/LevelChooser.unity
-    guid: 8d0ebfe6d747c8e4880f5addd334ca8a
   - enabled: 1
     path: Assets/Scenes/WinMenu.unity
     guid: 472e8596043ce834980ee01dcf663b6a
